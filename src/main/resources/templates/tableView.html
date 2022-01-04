@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Receipt</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Receipt</div>
+        <hr><!-- comment -->
+        <tr>
+            <th>Nama Sayuran        : </th><td th:text="${name}"></td></br>
+            <th>Harga Sayuran/Kg    :Rp.  </th><td th:text="${price}"></td></br>
+            <th>Jumlah Beli         : </th><td th:text="${quantity}"></td></br>
+            <th>Total               :Rp.  </th><td th:text="${total}"></td></br>
+            </th><td th:text="${Warning}"></td></br>
+            <th>Selamat anda mendapat potongan sebesar </th><td th:text="${Diskon}"></td></br> 
+            atau sebesar Rp. </th><td th:text="${tDiskon}"></td></br>
+        </tr>
+    </body>
+</html>
