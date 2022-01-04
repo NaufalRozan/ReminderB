@@ -19,10 +19,10 @@ public class projectController {
     @RequestMapping("/inputData")
     public String getData(HttpServletRequest data, Model discountprocess){
         
-        String InputName = data.getParameter("var_name");
-        String InputPrice = data.getParameter("var_price");
-        String InputQTY = data.getParameter("var_quantity");
-        String InputPayment = data.getParameter("var_payment");
+        String InputName = data.getParameter("name");
+        String InputPrice = data.getParameter("price");
+        String InputQTY = data.getParameter("quantity");
+        String InputPayment = data.getParameter("payment");
         String Diskon = "";
         String Warning = "";
         
@@ -77,12 +77,14 @@ public class projectController {
         discountprocess.addAttribute("name", InputName);
         discountprocess.addAttribute("price", InputPrice);
         discountprocess.addAttribute("quantity", InputQTY);
-        discountprocess.addAttribute("total", getTotal);
+        discountprocess.addAttribute("totald", getTotal);
         discountprocess.addAttribute("payment", InputPayment);
         discountprocess.addAttribute("Diskon", Diskon);
         discountprocess.addAttribute("kembalian", kembalian);
         discountprocess.addAttribute("Warning", Warning);
         discountprocess.addAttribute("tDiskon", tDiskon);
+        discountprocess.addAttribute("total", PriceTotal);
+        
         
         return "tableView";
     }

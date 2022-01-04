@@ -12,12 +12,13 @@ and open the template in the editor.
     </head>
     <body>
         <div>Receipt</div>
-        <hr><!-- comment -->
+        <hr>
         <tr>
             <th>Nama Sayuran        : </th><td th:text="${name}"></td></br>
             <th>Harga Sayuran/Kg    :Rp.  </th><td th:text="${price}"></td></br>
             <th>Jumlah Beli         : </th><td th:text="${quantity}"></td></br>
-            <th>Total               :Rp.  </th><td th:text="${total}"></td></br>
+            <th>Total Harga         :Rp.  </th><td th:text="${total}"></td></br>
+            <th>Total Harga Diskon  :Rp.  </th><td th:text="${totald}"></td></br>
             </th><td th:text="${Warning}"></td></br>
             <th>Selamat anda mendapat potongan sebesar </th><td th:text="${Diskon}"></td></br> 
             atau sebesar Rp. </th><td th:text="${tDiskon}"></td></br>
